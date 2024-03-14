@@ -1,0 +1,19 @@
+type Result_1 = 
+ variant {
+   err: text;
+   ok: text;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok: Entry;
+ };
+type Entry = 
+ record {
+   description: text;
+   word: text;
+ };
+service : {
+  addWord: (text, text) -> (Result_1);
+  getWord: (text) -> (Result) query;
+}
