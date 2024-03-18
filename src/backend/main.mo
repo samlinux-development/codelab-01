@@ -1,11 +1,8 @@
-import Hash "mo:base/Hash";
-import Nat "mo:base/Nat";
 import Map "mo:base/HashMap";
 import Text "mo:base/Text";
-
 import Result "mo:base/Result";
 
-actor dictionary {
+actor {
   
   //record type
   type Entry = {

@@ -8,8 +8,7 @@ let search:string = '', error:string ='', entry:Entry | null, result:Result;
 const handleOnSubmit = async () => {
   try {
 
-    error = '';
-    entry = null;
+    error = ''; entry = null;
 
     result = await backend.getWord(search);
     if ('ok' in result) {
@@ -20,7 +19,6 @@ const handleOnSubmit = async () => {
     }
     
     search = '';
-
   } catch (err) {
       console.error('>> ',err);
   }
